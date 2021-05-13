@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a <%= link_to "Home", root_path, class:"navbar-brand"%>></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse position-relative" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a <%= link_to "Categories", categories_path, class:"nav-link active "%></a>
+          </li>
+          <li class="nav-item">
+            <a <%= link_to "Bookmarks", bookmarks_path, class:"nav-link active "%></a>
+          </li>
+          <li class="nav-item">
+            <a <%= link_to "Kinds", kinds_path, class:"nav-link active "%></a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
