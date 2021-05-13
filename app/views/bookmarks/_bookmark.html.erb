@@ -1,6 +1,20 @@
   <tr>
         <td><%= bookmark.name %></td>
         <td><%= bookmark.url %></td>
+        <td>
+          <ul>
+            <% bookmark.categories.each do |category| %>
+            <li><%= link_to category, category_path(category) %></li>
+          <%end %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% bookmark.kinds.each do |kind| %>
+            <li><%= link_to kind, kind_path(kind) %></li>
+          <%end %>
+          </ul>
+        </td>
         <td><%= link_to 'Show', bookmark %></td>
         <td><%= link_to 'Edit', edit_bookmark_path(bookmark), remote: :true %></td>
         <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' }, remote: :true %></td>

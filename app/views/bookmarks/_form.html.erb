@@ -21,6 +21,33 @@
     <%= form.text_field :url %>
   </div>
 
+  <div class="field">
+    <%= form.label :category_ids, "Categories:" %>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+      <div class="form-check">
+        <%= cb.label class: 'form-check-label' do %>
+          <%= cb.check_box class: 'form-check-input' %>
+          <%= cb.text %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="form-check"></div>
+  </div>
+  <div class="field">
+    <%= form.label :kind_ids, "Kinds:" %>
+    <%= form.collection_check_boxes :kind_ids, Kind.all, :id, :name do |cb| %>
+      <div class="form-check">
+        <%= cb.label class: 'form-check-label' do %>
+          <%= cb.check_box class: 'form-check-input' %>
+          <%= cb.text %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+
   <div class="actions">
     <%= form.submit disable_with: 'Submiting', data: { confirm: 'Estas seguro ?' }%>
   </div>
