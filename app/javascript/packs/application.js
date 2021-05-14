@@ -11,6 +11,7 @@ import "channels"
 import'bootstrap'
 import'css/style'
 import'chartkick/chart.js'
+import'packs'
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
