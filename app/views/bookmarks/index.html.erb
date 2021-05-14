@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Bookmarks</h1>
-
-<%= render 'form', bookmark: @bookmark %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Categories</th>
-      <th>Kinds</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody id="bookmarks">
-    <%= render @bookmarks%>
-  </tbody>
-</table>
-
-<br>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Bookmarks</h1>
+  
+  <%= render 'form', bookmark: @bookmark %>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Url</th>
+        <th>Categories</th>
+        <th>Kinds</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody id="bookmarks">
+      <%= render @bookmarks%>
+    </tbody>
+  </table>
+  
+  <br>
+</div>
